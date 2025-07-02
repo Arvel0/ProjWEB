@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sports Store</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+  <button id="themeToggle">🌙 Dark Mode</button>
+
+  <header>
+  <div class="logo">🏀 Sports Store</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav id="navMenu">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="search-bar">
+  <input type="text" placeholder="Search products..." id="searchInput">
+  <button onclick="searchProducts()">🔍</button>
+    </div>
+
+    <!-- Add to header -->
+<div class="cart-icon" onclick="toggleCart()">🛒 <span id="cartCount">0</span></div>
+
+<!-- Add before footer -->
+<div id="cartSidebar" class="cart-sidebar">
+  <h3>Your Cart</h3>
+  <div id="cartItems"></div>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+</header>
+
+  <section class="banner" id="home">
+    <h1 id="bannerText">Welcome to the Ultimate Sports Store</h1>
+    <p>Your one-stop shop for all your sporting needs!</p>
+  </section>
+
+  <section class="features" id="products">
+    <h2>🏅 Our Product Categories</h2>
+    <!-- Add to products section -->
+<div class="filters">
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="football">Football</option>
+    <!-- Add other categories -->
+  </select>
+  <select id="priceFilter">
+    <option value="all">Any Price</option>
+    <option value="0-50">Under $50</option>
+    <!-- Add other ranges -->
+  </select>
+</div>
+    <div class="product-list">
+      <div class="product fade-in">
+        <img src="https://via.placeholder.com/200" alt="Football">
+        <h3>Football</h3>
+        <p>FIFA approved match balls</p>
+      </div>
+      <div class="product fade-in">
+        <img src="https://via.placeholder.com/200" alt="Basketball">
+        <h3>Basketball</h3>
+        <p>Indoor and outdoor basketballs</p>
+      </div>
+      <div class="product fade-in">
+        <img src="https://via.placeholder.com/200" alt="Shoes">
+        <h3>Running Shoes</h3>
+        <p>Lightweight & durable designs</p>
+      </div>
+      <div class="product fade-in">
+        <img src="https://via.placeholder.com/200" alt="Gym Equipment">
+        <h3>Fitness Gear</h3>
+        <p>Home & commercial fitness tools</p>
+      </div>
+      <div class="product fade-in">
+        <img src="https://via.placeholder.com/200" alt="Wristbands">
+        <h3>Accessories</h3>
+        <p>Wristbands, gloves, and more</p>
+      </div>
+      <div class="product fade-in">
+        <img src="https://via.placeholder.com/200" alt="T-Shirts">
+        <h3>Sports Apparel</h3>
+        <p>Moisture-wicking sportswear</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers" id="offers">
+    <h2>🔥 Weekly Offers</h2>
+    <ul>
+      <li>🏷️ Buy 1 Football, Get 1 50% Off</li>
+      <li>👟 30% Off All Running Shoes</li>
+      <li>💪 Free Yoga Mat with Fitness Bundle</li>
+      <li>🎁 Flat 20% Discount on Orders Above $100</li>
+    </ul>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <h2>💬 Customer Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial fade-in">
+        <p>"Fast delivery and premium quality products. Highly recommend!"</p>
+        <h4>- Aayush K.</h4>
+      </div>
+      <div class="testimonial fade-in">
+        <p>"Love the variety of fitness gear. Great prices too!"</p>
+        <h4>- Rina S.</h4>
+      </div>
+      <div class="testimonial fade-in">
+        <p>"Best place to shop for sportswear in Nepal!"</p>
+        <h4>- Milan D.</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>📍 Contact Us</h2>
+    <p>Email: info@sportsstore.com</p>
+    <p>Phone: +977-9800000000</p>
+    <p>Location: Kathmandu, Nepal</p>
+    <div class="map-placeholder">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.456715022378!2d85.32028731506205!3d27.70554438279391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQyJzIwLjAiTiA4NcKwMTknMTkuNyJF!5e0!3m2!1sen!2snp!4v1620000000000!5m2!1sen!2snp" 
+width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+  </section>
+
+  <!-- Add before footer -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Login / Register</h3>
+    <!-- Add form here -->
+  </div>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Sports Store. All rights reserved.</p>
+  </footer>
+
+  <button id="topBtn">⬆ Back to Top</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
